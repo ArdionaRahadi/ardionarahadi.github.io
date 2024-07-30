@@ -1,12 +1,21 @@
 let menu = document.getElementById("menu");
 let sideBar = document.getElementById("sidebar");
+let imgThumb = document.getElementById("img_thumb");
+let profileSetting = document.getElementById("profile_setting");
 menu.addEventListener("click", function () {
     sideBar.classList.toggle("open");
     menu.classList.toggle("open");
 });
 
-document.addEventListener("click", function (e) {
+imgThumb.addEventListener("click", function () {
+    profileSetting.classList.toggle("show");
+});
+
+window.addEventListener("click", function (e) {
     if (!menu.contains(e.target)) {
         sideBar.classList.remove("open");
+    }
+    if (!imgThumb.contains(e.target)) {
+        profileSetting.classList.remove("show");
     }
 });

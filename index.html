@@ -1,85 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- boxicon -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+        <!-- boxicon -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
 
-    <!-- my css -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>AdminApp</title>
-  </head>
-  <body>
-    <div class="container">
-      <header class="top_bar">
-        <i id="menu" class="bx bx-menu"></i>
-        <form>
-          <div class="input_group">
-            <i class="bx bx-search"></i>
-            <input
-              placeholder="search..."
-              type="text"
-              name="search"
-              class="search"
-              id="search"
-            />
-          </div>
-        </form>
-        <div class="img_thumb">
-          <img src="assets/img/raiden ei thumb.jpg" alt="Profil" />
+        <!-- my css -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>AdminApp</title>
+    </head>
+    <body>
+        <div class="container">
+            <!-- TOPBAR -->
+            <header class="top_bar">
+                <i id="menu" class="bx bx-menu menu"></i>
+                <form>
+                    <div class="input_group">
+                        <i class="bx bx-search search"></i>
+                        <input
+                            placeholder="search..."
+                            type="text"
+                            name="search"
+                            class="search"
+                            id="search"
+                        />
+                    </div>
+                </form>
+                <div class="profile">
+                    <div id="profile_setting" class="profile_setting">
+                        <ul class="setting_list">
+                            <li>
+                                <a href="#">
+                                    <i class="bx bx-user-circle"></i>
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li class="notif">
+                                <a href="#">
+                                    <i class="bx bx-bell"></i>
+                                    <span>Notification</span>
+                                </a>
+                            </li>
+                            <li class="notif">
+                                <a href="#">
+                                    <i class="bx bx-message-dots"></i>
+                                    <span>Message</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><i class="bx bx-cog"></i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><i class="bx bx-log-out-circle"></i>
+                                    <span>Log Out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="icon_container">
+                        <i class="bx bx-bell notif"></i>
+                        <i class="bx bx-message-dots notif"></i>
+                    </div>
+                    <div id="img_thumb" class="img_thumb">
+                        <img
+                            src="assets/img/raiden ei thumb.jpg"
+                            alt="Profil"
+                        />
+                    </div>
+                </div>
+            </header>
+            <!-- TOPBAR -->
+
+            <!-- SIDEBAR -->
+            <nav id="sidebar" class="sidebar">
+                <h1>AdminApps</h1>
+                <div class="sub">
+                    <span>Main</span>
+                </div>
+                <ul class="menu_list">
+                    <li>
+                        <a class="active" href="#">
+                            <i class="bx bxs-dashboard dahsboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bx bx-line-chart chart"></i>
+                            <span>Charts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bx bxs-widget widget"></i>
+                            <span>Widgets</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="sub">
+                    <span>Tables</span>
+                </div>
+                <ul class="menu_list">
+                    <li>
+                        <a href="#">
+                            <i class="bx bxs-dashboard table"></i>
+                            <span>Pemasukan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bx bx-line-chart table"></i>
+                            <span>Pengeluaran</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- SIDEBAR -->
         </div>
-      </header>
 
-      <nav id="sidebar" class="sidebar">
-        <h1>AdminApps</h1>
-        <div class="sub">
-          <p>Main</p>
-        </div>
-        <ul class="menu_list">
-          <li>
-            <a href="#">
-              <i class="bx bxs-dashboard"></i>
-              <span>Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-line-chart"></i>
-              <span>Charts</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bxs-widget"></i>
-              <span>Widgets</span>
-            </a>
-          </li>
-        </ul>
-        <div class="sub">
-          <p>Tables</p>
-        </div>
-        <ul class="menu_list">
-          <li>
-            <a href="#">
-              <i class="bx bxs-dashboard"></i>
-              <span>Pemasukan</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-line-chart"></i>
-              <span>Pengeluaran</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <script src="assets/js/script.js"></script>
-  </body>
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>
