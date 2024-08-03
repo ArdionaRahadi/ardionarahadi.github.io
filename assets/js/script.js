@@ -27,9 +27,18 @@ window.addEventListener("scroll", function (e) {
 
 function myFunction() {
     let loader = document.getElementsByClassName("loader");
-    for(let i = 0; i < loader.length; i++){
-      
-    loader[i].classList.add("active");
+    for (let i = 0; i < loader.length; i++) {
+        loader[i].classList.add("active");
     }
+}
 
+let check = document.getElementById("showPw");
+
+function showPasswd() {
+    let passwd = document.getElementById("password");
+    if (passwd.type === "password") {
+        passwd.type = "text";
+    } else {
+        passwd.type = "password";
+    }
 }

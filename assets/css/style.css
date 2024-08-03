@@ -126,7 +126,6 @@ body::-webkit-scrollbar {
     width: 100%;
     padding: 10px 15px;
     border-radius: 4px;
-    background: none;
     border: none;
     outline: none;
     background: rgba(234, 234, 234, 0.8);
@@ -286,7 +285,7 @@ body::-webkit-scrollbar {
 }
 
 .loader.active {
-  display: none;
+    display: none;
 }
 /*.loader.active {*/
 /*    display: none;*/
@@ -324,6 +323,82 @@ body::-webkit-scrollbar {
     object-fit: cover;
 }
 /* MAIN */
+
+/* LOGIN FORM */
+.container_form {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_form form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    width: 500px;
+}
+
+.container_form form h1 {
+    margin: 10px 0;
+}
+
+.container_form .form_content {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    gap: 5px;
+    margin: 25px 0 10px;
+    position: relative;
+}
+
+.container_form .form_content i {
+    font-size: 1.4em;
+    position: absolute;
+    top: 50%;
+    transform: translate(10px, -50%);
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(234, 234, 234, 1);
+}
+
+.container_form form input#username,
+.container_form form input#password {
+    width: 100%;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding: 10px 35px;
+    background: rgba(234, 234, 234, 1);
+}
+
+.container_form form input:focus {
+    box-shadow: 0 0 5px #1775f1;
+}
+
+.container_form form .checkbox {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.container_form form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    background: #1775f1;
+    color: #fff;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+/* LOGIN FORM */
 
 /* BREAK POINT */
 /* LAPTOP */
@@ -476,5 +551,9 @@ body::-webkit-scrollbar {
 
     .main .main_container {
         padding: 70px 20px 20px;
+    }
+
+    .container_form form {
+        width: 370px;
     }
 }
