@@ -13,6 +13,10 @@ body {
     color: #333;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 /* TOPBAR */
 .top_bar {
     display: flex;
