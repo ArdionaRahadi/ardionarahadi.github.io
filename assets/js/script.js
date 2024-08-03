@@ -24,3 +24,12 @@ window.addEventListener("scroll", function (e) {
     sideBar.classList.remove("open");
     profileSetting.classList.remove("show");
 });
+
+function myFunction() {
+    let loader = document.getElementsByClassName("loader");
+    for(let i = 0; i < loader.length; i++){
+      
+    loader[i].classList.add("active");
+    }
+
+}
