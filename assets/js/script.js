@@ -19,3 +19,8 @@ window.addEventListener("click", function (e) {
         profileSetting.classList.remove("show");
     }
 });
+
+window.addEventListener("scroll", function (e) {
+    sideBar.classList.remove("open");
+    profileSetting.classList.remove("show");
+});
