@@ -336,7 +336,7 @@ body::-webkit-scrollbar {
 .container_form form {
     background: #fff;
     padding: 20px;
-    border-radius: 7px;
+    border-radius: 15px;
     width: 500px;
 }
 
@@ -397,6 +397,17 @@ body::-webkit-scrollbar {
     color: #fff;
     margin: 5px 0;
     border-radius: 5px;
+}
+
+.container_form form .forgot_content {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 3px;
+    font-size: 0.8em;
+}
+
+.container_form form .forgot_content a {
+    text-decoration: none;
 }
 /* LOGIN FORM */
 
