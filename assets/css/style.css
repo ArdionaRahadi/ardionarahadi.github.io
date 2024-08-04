@@ -341,7 +341,7 @@ body::-webkit-scrollbar {
 }
 
 .container_form form h1 {
-    margin: 10px 0;
+    margin: 10px 3px;
 }
 
 .container_form .form_content {
@@ -371,7 +371,7 @@ body::-webkit-scrollbar {
     border: none;
     outline: none;
     border-radius: 7px;
-    padding: 10px 35px;
+    padding: 12px 35px;
     background: rgba(234, 234, 234, 1);
 }
 
@@ -384,7 +384,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-bottom: 5px;
+    margin: 20px 0;
 }
 
 .container_form form button {
@@ -399,15 +399,21 @@ body::-webkit-scrollbar {
     border-radius: 5px;
 }
 
-.container_form form .forgot_content {
-    display: flex;
-    justify-content: space-between;
-    margin: 8px 3px;
-    font-size: 0.8em;
+.container_form form .forgot,
+.container_form form .register a {
+    text-decoration: none;
+    font-size: 0.9em;
 }
 
-.container_form form .forgot_content a {
-    text-decoration: none;
+.container_form form .forgot p {
+    margin: 15px 3px;
+    font-size: 0.9em;
+}
+
+.container_form form .register {
+    text-align: center;
+    font-size: 0.9em;
+    margin: 15px 0;
 }
 /* LOGIN FORM */
 
