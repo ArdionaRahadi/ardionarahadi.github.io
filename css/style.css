@@ -8,3 +8,7 @@ div#offcanvasExample {
     background: #07244c;
     color: #e5eaf3;
 }
+
+body {
+  height: 10000px;
+}
