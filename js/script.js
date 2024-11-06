@@ -1,17 +1,7 @@
 new Typewriter("#typewriter", {
-  strings: [
-    "Web Developer",
-    "Programmer",
-    "Content Creator",
-    "Gammer",
-    "Jungler",
-    "Gold Laner",
-    "Exp Laner",
-    "Mid Laner",
-    "Roamer",
-  ],
-  autoStart: true,
-  loop: true,
+    strings: ["XII TKJ 3"],
+    autoStart: true,
+    loop: true
 });
 
 // gsap.registerPlugin(ScrollTrigger);
