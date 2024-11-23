@@ -17,3 +17,7 @@ textarea {
     resize: none;
     height: 150px;
 }
+
+section {
+    overflow-x: hidden;
+}
