@@ -1,159 +1,173 @@
 :root {
-    --offcanvas-width: 270px;
-    --topNavbarHeight: 56px;
-    --white-color: #fff;
-    --bg-base-color-one: #e5eaf3;
-    --bg-base-color-two: #07244c;
-    --bg-base-color-three: #7671fa;
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+  --white-color: #fff;
+  --bg-base-color-one: #e5eaf3;
+  --bg-base-color-two: #607adb;
+  --bg-base-color-three: #7671fa;
 }
 
-.darkmode {
-    --black-color: #555666;
-    --bg-black: #333;
-    --bg-base-color-one: #26292e;
-    --bg-base-color-two: #2f323b;
-    --bg-base-color-three: #10f5cc;
-    --bg-base-color-four: #607adb;
-    --text-color: #f5fefd;
+.dark {
+  --black-color: #555666;
+  --bg-black: #333;
+  --bg-base-color-one: #26292e;
+  --bg-base-color-two: #2f323b;
+  --bg-base-color-three: #10f5cc;
+  --bg-base-color-four: #07244c;
+  --text-color: #f5fefd;
 }
 
 div#offcanvasExample {
-    width: var(--offcanvas-width);
-    background: var(--bg-base-color-two);
-    color: var(--bg-base-color-one);
+  width: var(--offcanvas-width);
+  background: var(--bg-base-color-two);
+  color: var(--bg-base-color-one);
 }
 
-div#offcanvasExample.darkmode {
-    color: var(--text-color);
-    background: var(--bg-base-color-four);
+div#offcanvasExample.dark {
+  color: var(--text-color);
+  background: var(--bg-base-color-four);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 textarea {
-    resize: none;
-    height: 150px;
+  resize: none;
+  height: 150px;
 }
 
 #theme-switch {
-    height: 35px;
-    width: 35px;
-    padding: 0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 35px;
+  width: 35px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #theme-switch i:last-child {
-    display: none;
+  display: none;
 }
 
 section {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 section.home {
-    background: linear-gradient(
-        to bottom,
-        var(--white-color) 97%,
-        var(--bg-base-color-one)
-    );
+  background: linear-gradient(
+    to bottom,
+    var(--white-color) 97%,
+    var(--bg-base-color-one)
+  );
 }
-section.home.darkmode {
-    color: var(--text-color);
-    background: linear-gradient(
-        to bottom,
-        var(--bg-base-color-one) 97%,
-        var(--bg-base-color-two)
-    );
+section.home.dark {
+  color: var(--text-color);
+  background: linear-gradient(
+    to bottom,
+    var(--bg-base-color-one) 97%,
+    var(--bg-base-color-two)
+  );
 }
 a.button {
-    background: var(--bg-base-color-three);
-    color: var(--bg-base-color-one);
+  background: var(--bg-base-color-three) !important;
+  color: var(--bg-base-color-one) !important;
 }
 a.button.darkmode {
-    color: var(--black-color);
+  color: var(--black-color) !important;
+  background: var(--bg-base-color-three) !important;
 }
 
 section.about {
-    background: linear-gradient(
-        to bottom,
-        var(--bg-base-color-one) 97%,
-        var(--white-color)
-    );
+  background: linear-gradient(
+    to bottom,
+    var(--bg-base-color-one) 97%,
+    var(--white-color)
+  );
 }
-section.about.darkmode {
-    color: var(--text-color);
-    background: linear-gradient(
-        to bottom,
-        var(--bg-base-color-two) 97%,
-        var(--bg-base-color-one)
-    );
+section.about.dark {
+  color: var(--text-color);
+  background: linear-gradient(
+    to bottom,
+    var(--bg-base-color-two) 97%,
+    var(--bg-base-color-one)
+  );
 }
 button.button {
-    background: var(--bg-base-color-three);
-    color: var(--bg-base-color-one);
+  background: var(--bg-base-color-three) !important;
+  color: var(--bg-base-color-one) !important;
 }
-button.button.darkmode {
-    color: var(--black-color);
+button.button.dark {
+  color: var(--black-color);
+  background: var(--bg-base-color-three);
 }
 
 section.projects {
-    background: linear-gradient(
-        to bottom,
-        var(--white-color) 97%,
-        var(--bg-base-color-one)
-    );
+  background: linear-gradient(
+    to bottom,
+    var(--white-color) 97%,
+    var(--bg-base-color-one)
+  );
 }
-section.projects.darkmode {
-    color: var(--text-color);
-    background: linear-gradient(
-        to bottom,
-        var(--bg-base-color-one) 97%,
-        var(--bg-base-color-two)
-    );
+section.projects.dark {
+  color: var(--text-color);
+  background: linear-gradient(
+    to bottom,
+    var(--bg-base-color-one) 97%,
+    var(--bg-base-color-two)
+  );
 }
-div.card.darkmode {
-    color: var(--text-color);
-    background: var(--bg-base-color-two);
+div.card.dark {
+  color: var(--text-color);
+  background: var(--bg-base-color-two);
 }
 
 section.contact {
-    background: linear-gradient(
-        to bottom,
-        var(--bg-base-color-one) 97%,
-        var(--white-color)
-    );
+  background: linear-gradient(
+    to bottom,
+    var(--bg-base-color-one) 97%,
+    var(--white-color)
+  );
 }
-section.contact.darkmode {
-    color: var(--text-color);
-    background: linear-gradient(
-        to bottom,
-        var(--bg-base-color-two) 97%,
-        var(--bg-base-color-one)
-    );
+form.form button.button {
+  background: var(--bg-base-color-three);
+  color: var(--bg-base-color-one);
+}
+section.contact.dark {
+  color: var(--text-color);
+  background: linear-gradient(
+    to bottom,
+    var(--bg-base-color-two) 97%,
+    var(--bg-base-color-one)
+  );
+}
+div.card.card-form.dark {
+  background: var(--bg-base-color-one);
+  color: var(--text-color);
+}
+form.form button.button.dark {
+  background: var(--bg-base-color-three);
+  color: var(--black-color);
 }
 
 nav.nav {
-    background: var(--bg-base-color-two);
+  background: var(--bg-base-color-two);
 }
-nav.nav.darkmode {
-    background: var(--bg-base-color-four);
-    color: var(--text-color);
+nav.nav.dark {
+  background: var(--bg-base-color-four);
+  color: var(--text-color);
 }
 
 footer.footer {
-    background: var(--bg-base-color-two);
+  background: var(--bg-base-color-two);
 }
-footer.footer.darkmode {
-    background: var(--bg-base-color-four);
+footer.footer.dark {
+  background: var(--bg-base-color-four);
 }
 p.footer-text {
-    color: var(--bg-base-color-one);
+  color: var(--bg-base-color-one);
 }
-p.footer-text.darkmode {
-    color: var(--text-color);
+p.footer-text.dark {
+  color: var(--text-color);
 }
