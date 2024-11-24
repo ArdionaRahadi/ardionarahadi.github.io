@@ -18,6 +18,40 @@ textarea {
     height: 150px;
 }
 
+#theme-switch {
+    height: 35px;
+    width: 35px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch i:last-child{
+  display: none;
+}
+
 section {
     overflow-x: hidden;
+}
+
+section.home {
+    background: linear-gradient(to bottom, #fff 97%, #e5eaf3);
+}
+
+section.about {
+    background: linear-gradient(to bottom, #e5eaf3 97%, #fff);
+}
+
+section.projects {
+    background: linear-gradient(to bottom, #fff 97%, #e5eaf3);
+}
+
+section.contact {
+    background: linear-gradient(to bottom, #e5eaf3 97%, #fff);
+}
+
+nav.nav {
+    background: #07244c;
 }
