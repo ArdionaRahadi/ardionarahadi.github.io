@@ -1,12 +1,31 @@
 :root {
     --offcanvas-width: 270px;
     --topNavbarHeight: 56px;
+    --white-color: #fff;
+    --bg-base-color-one: #e5eaf3;
+    --bg-base-color-two: #07244c;
+    --bg-base-color-three: #7671fa;
+}
+
+.darkmode {
+    --black-color: #555666;
+    --bg-black: #333;
+    --bg-base-color-one: #26292e;
+    --bg-base-color-two: #2f323b;
+    --bg-base-color-three: #10f5cc;
+    --bg-base-color-four: #607adb;
+    --text-color: #f5fefd;
 }
 
 div#offcanvasExample {
     width: var(--offcanvas-width);
-    background: #07244c;
-    color: #e5eaf3;
+    background: var(--bg-base-color-two);
+    color: var(--bg-base-color-one);
+}
+
+div#offcanvasExample.darkmode {
+    color: var(--text-color);
+    background: var(--bg-base-color-four);
 }
 
 a {
@@ -28,8 +47,8 @@ textarea {
     align-items: center;
 }
 
-#theme-switch i:last-child{
-  display: none;
+#theme-switch i:last-child {
+    display: none;
 }
 
 section {
@@ -37,21 +56,104 @@ section {
 }
 
 section.home {
-    background: linear-gradient(to bottom, #fff 97%, #e5eaf3);
+    background: linear-gradient(
+        to bottom,
+        var(--white-color) 97%,
+        var(--bg-base-color-one)
+    );
+}
+section.home.darkmode {
+    color: var(--text-color);
+    background: linear-gradient(
+        to bottom,
+        var(--bg-base-color-one) 97%,
+        var(--bg-base-color-two)
+    );
+}
+a.button {
+    background: var(--bg-base-color-three);
+    color: var(--bg-base-color-one);
+}
+a.button.darkmode {
+    color: var(--black-color);
 }
 
 section.about {
-    background: linear-gradient(to bottom, #e5eaf3 97%, #fff);
+    background: linear-gradient(
+        to bottom,
+        var(--bg-base-color-one) 97%,
+        var(--white-color)
+    );
+}
+section.about.darkmode {
+    color: var(--text-color);
+    background: linear-gradient(
+        to bottom,
+        var(--bg-base-color-two) 97%,
+        var(--bg-base-color-one)
+    );
+}
+button.button {
+    background: var(--bg-base-color-three);
+    color: var(--bg-base-color-one);
+}
+button.button.darkmode {
+    color: var(--black-color);
 }
 
 section.projects {
-    background: linear-gradient(to bottom, #fff 97%, #e5eaf3);
+    background: linear-gradient(
+        to bottom,
+        var(--white-color) 97%,
+        var(--bg-base-color-one)
+    );
+}
+section.projects.darkmode {
+    color: var(--text-color);
+    background: linear-gradient(
+        to bottom,
+        var(--bg-base-color-one) 97%,
+        var(--bg-base-color-two)
+    );
+}
+div.card.darkmode {
+    color: var(--text-color);
+    background: var(--bg-base-color-two);
 }
 
 section.contact {
-    background: linear-gradient(to bottom, #e5eaf3 97%, #fff);
+    background: linear-gradient(
+        to bottom,
+        var(--bg-base-color-one) 97%,
+        var(--white-color)
+    );
+}
+section.contact.darkmode {
+    color: var(--text-color);
+    background: linear-gradient(
+        to bottom,
+        var(--bg-base-color-two) 97%,
+        var(--bg-base-color-one)
+    );
 }
 
 nav.nav {
-    background: #07244c;
+    background: var(--bg-base-color-two);
+}
+nav.nav.darkmode {
+    background: var(--bg-base-color-four);
+    color: var(--text-color);
+}
+
+footer.footer {
+    background: var(--bg-base-color-two);
+}
+footer.footer.darkmode {
+    background: var(--bg-base-color-four);
+}
+p.footer-text {
+    color: var(--bg-base-color-one);
+}
+p.footer-text.darkmode {
+    color: var(--text-color);
 }
