@@ -26,73 +26,68 @@ gsap.from("nav", {
     ease: "power2.out"
 });
 
-// darkmode fitur
-let darkmode = localStorage.getItem("darkmode");
-let switchButton = document.querySelectorAll("#theme-switch");
-let navbar = document.querySelector("nav");
-let canvas = document.getElementById("offcanvasExample");
-let section = document.querySelectorAll("section");
-let buttonA = document.querySelectorAll("a.button");
-let buttonB = document.querySelectorAll("button.button");
-let cardProjects = document.querySelectorAll("div.card.card-projects");
-let contact = document.getElementById("card-form");
-let footer = document.querySelector(".footer");
-let footerText = document.querySelector(".footer-text");
+// Dark Mode Toggle
+const darkModeToggle = document.querySelector(".dark-mode-button");
+const darkModeBall = document.querySelector(".dark-mode-ball");
+const body = document.body;
+const offcanvas = document.querySelector("div#offcanvasExample");
+const navbar = document.querySelector("nav.nav");
+const home = document.querySelector("section.home");
+const button = document.querySelector("a.button");
+const about = document.querySelector("section.about");
+const readMore = document.querySelector("button.button");
+const projects = document.querySelector("section.projects");
+const contact = document.querySelector("section.contact");
+const formBtn = document.querySelector("form.form button.button");
+const socials = document.querySelectorAll("#socials .button");
 
-for (let i = 0; i < switchButton.length; i++) {
-    switchButton[i].addEventListener("click", function () {
-        darkmode = localStorage.getItem("darkmode");
-        darkmode !== "active" ? enableDarkmode() : disableDarkmode();
-        console.log(darkmode);
-    });
+// Check for saved dark mode preference
+if (localStorage.getItem("darkMode") === "enabled") {
+    enableDarkMode();
 }
 
-if (darkmode === "active") enableDarkmode();
+darkModeToggle.addEventListener("click", () => {
+    if (body.classList.contains("dark-mode")) {
+        disableDarkMode();
+    } else {
+        enableDarkMode();
+    }
+});
 
-function enableDarkmode() {
-    localStorage.setItem("darkmode", "active");
-    navbar.classList.add("dark");
-    canvas.classList.add("dark");
-    for (let i = 0; i < section.length; i++) {
-        section[i].classList.add("dark");
+function enableDarkMode() {
+    body.classList.add("dark-mode");
+    offcanvas.classList.add("dark-mode");
+    navbar.classList.add("dark-mode");
+    home.classList.add("dark-mode");
+    button.classList.add("dark-mode");
+    about.classList.add("dark-mode");
+    readMore.classList.add("dark-mode");
+    projects.classList.add("dark-mode");
+    contact.classList.add("dark-mode");
+    formBtn.classList.add("dark-mode");
+    for (let i = 0; i < socials.length; i++) {
+        socials[i].classList.add("dark-mode");
     }
-    for (let i = 0; i < buttonA.length; i++) {
-        buttonA[i].classList.add("dark");
-    }
-    for (let i = 0; i < buttonB.length; i++) {
-        buttonB[i].classList.add("dark");
-    }
-    for (let i = 0; i < switchButton.length; i++) {
-        switchButton[i].classList.add("dark");
-    }
-    for (let i = 0; i < cardProjects.length; i++) {
-        cardProjects[i].classList.add("dark");
-    }
-    contact.classList.add("dark");
-    footer.classList.add("dark");
-    footerText.classList.add("dark");
+    darkModeToggle.classList.add("active");
+    darkModeBall.classList.add("active");
+    localStorage.setItem("darkMode", "enabled");
 }
 
-function disableDarkmode() {
-    localStorage.clear();
-    navbar.classList.remove("dark");
-    canvas.classList.remove("dark");
-    for (let i = 0; i < section.length; i++) {
-        section[i].classList.remove("dark");
+function disableDarkMode() {
+    body.classList.remove("dark-mode");
+    offcanvas.classList.remove("dark-mode");
+    navbar.classList.remove("dark-mode");
+    home.classList.remove("dark-mode");
+    button.classList.remove("dark-mode");
+    about.classList.remove("dark-mode");
+    readMore.classList.remove("dark-mode");
+    projects.classList.remove("dark-mode");
+    contact.classList.remove("dark-mode");
+    formBtn.classList.remove("dark-mode");
+    for (let i = 0; i < socials.length; i++) {
+        socials[i].classList.remove("dark-mode");
     }
-    for (let i = 0; i < buttonA.length; i++) {
-        buttonA[i].classList.remove("dark");
-    }
-    for (let i = 0; i < buttonB.length; i++) {
-        buttonB[i].classList.remove("dark");
-    }
-    for (let i = 0; i < switchButton.length; i++) {
-      switchButton[i].classList.remove('dark')
-    }
-    for (let i = 0; i < cardProjects.length; i++) {
-        cardProjects[i].classList.remove("dark");
-    }
-    contact.classList.remove("dark");
-    footer.classList.remove("dark");
-    footerText.classList.remove("dark");
+    darkModeToggle.classList.remove("active");
+    darkModeBall.classList.remove("active");
+    localStorage.setItem("darkMode", null);
 }
